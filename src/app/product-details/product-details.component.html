@@ -1,0 +1,10 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product else elseBlock">
+  <h3>{{ product.name }}</h3>
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+</div>
+<ng-template #elseBlock>
+  <p>There's no product with that ID.</p>
+</ng-template>
